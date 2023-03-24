@@ -8,13 +8,10 @@
 		expanded="{device>/isNoPhone}"
 		class="sapUiResponsiveContentPadding">
 		<items>
-			<IconTabFilter icon="sap-icon://email" key="mail">
-				<Text text="Info content goes here ..." />
-			</IconTabFilter>
 			<IconTabFilter
 				icon="sap-icon://world"
 				key="attachments">
-				<Text text="Attachments go here ..." />
+            <mvc:XMLView viewName="cybersecurity.cybersecurity.view.Domain"/>
 			</IconTabFilter>
 			<IconTabFilter
 				icon="sap-icon://accept"
