@@ -31,15 +31,21 @@ sap.ui.define([
                 // set the device model
                 this.setModel(models.createDeviceModel(), "device");
 
-                // set model for emails
+                // set model for emails (domain page)
                 let oData = {
                     emailsFound: []
                 };
                 let oModel = new JSONModel(oData);
                 this.setModel(oModel, "emails");
+
+                
                 
                 // set model for EmailCheck
-                
+                let oDataMail = {
+                    emailsFoundCheck: []
+                };
+                let oModelMail = new JSONModel(oDataMail);
+                this.setModel(oModelMail, "emailsCheck");
             }
         });
     }
