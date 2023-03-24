@@ -9,7 +9,7 @@
 		class="sapUiResponsiveContentPadding">
 		<items>
 			<IconTabFilter icon="sap-icon://email" key="mail">
-				<Text text="Info content goes here ..." />
+				<mvc:XMLView viewName="cybersecurity.cybersecurity.view.EmailCheck"/>
 			</IconTabFilter>
 			<IconTabFilter
 				icon="sap-icon://world"
