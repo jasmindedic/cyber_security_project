@@ -14,7 +14,7 @@
 			<IconTabFilter
 				icon="sap-icon://world"
 				key="attachments">
-				<Text text="Attachments go here ..." />
+            <mvc:XMLView viewName="cybersecurity.cybersecurity.view.Domain"/>
 			</IconTabFilter>
 			<IconTabFilter
 				icon="sap-icon://accept"

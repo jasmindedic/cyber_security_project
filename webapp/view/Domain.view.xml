@@ -1,0 +1,41 @@
+<mvc:View controllerName="cybersecurity.cybersecurity.controller.Domain"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    	<Label text="Domain" labelFor="domainInput" />
+		<Input
+			id="domainInput"
+			placeholder="Enter Domain">
+		</Input>
+        <Button id="button" press="onPressButton" text="send request"/>
+
+        <Table id="idTable"
+		items="{emails&gt;/emailsFound}">
+		<columns>
+			<Column
+				width="12em">
+				<Text text="E-Mail" />
+			</Column>
+            <Column
+				width="12em">
+				<Text text="Phone Number" />
+			</Column>
+            <Column
+				width="12em">
+				<Text text="Job" />
+			</Column>
+		</columns>
+		<items>
+			<ColumnListItem vAlign="Middle">
+				<cells>
+					<Text
+						text="{emails>value}" />
+                    <Text
+						text="{emails>phone_number}" />
+                    <Text
+						text="{emails>position}" />
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table>
+
+</mvc:View>
