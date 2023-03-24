@@ -22,7 +22,7 @@
 				<mvc:XMLView viewName="cybersecurity.cybersecurity.view.Finder"/>
 			</IconTabFilter>
 			<IconTabFilter icon="sap-icon://activity-items" key="people">
-				<Text text="People content goes here ..." />
+				<Text text="More Content ..." />
 			</IconTabFilter>
 		</items>
 	</IconTabBar>

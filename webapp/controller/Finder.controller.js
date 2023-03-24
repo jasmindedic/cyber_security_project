@@ -52,6 +52,7 @@ sap.ui.define([
                         console.log(result.data);
                         let validity = result.data.score;
                         let countSources = result.data.sources.length;
+                        let email = result.data.email;
 
                         if (validity < 90) {
                             this.getView().byId("validityStrip").setType("Warning");
@@ -60,8 +61,11 @@ sap.ui.define([
                         }
                         this.getView().byId("validityStrip").setText("This Email is valid with a score of " + validity + "%");
                         this.getView().byId("counterStrip").setText("We found your Email " + countSources + " times on the web");
+                        this.getView().byId("emailStrip").setText("We found this Email: " + email);
                         this.getView().byId("counterStrip").setVisible(true);
                         this.getView().byId("validityStrip").setVisible(true);
+                        this.getView().byId("emailStrip").setVisible(true);
+                        
                     })
                 }
             },

@@ -8,6 +8,7 @@
     <HBox justifyContent="Center">
         <Button class="sapUiSmallMarginBottom sapUiTinyMarginTop" id="button" press="onPressButton" text="Find E-Mail"/>
     </HBox>
-    <MessageStrip id="validityStrip" visible="false" text="" type="None" showIcon="true" class="sapUiMediumMarginBottom"></MessageStrip>
+    <MessageStrip id="emailStrip" visible="false" text="" type="None" showIcon="true" class="sapUiMediumMarginBottom"></MessageStrip>
     <MessageStrip id="counterStrip" visible="false" text="" type="Information" showIcon="true" class="sapUiMediumMarginBottom"></MessageStrip>
+    <MessageStrip id="validityStrip" visible="false" text="" type="Information" showIcon="true" class="sapUiMediumMarginBottom"></MessageStrip>
 </mvc:View>
