@@ -1,0 +1,31 @@
+<mvc:View controllerName="cybersecurity.cybersecurity.controller.Home"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <IconTabBar
+		id="idIconTabBarMulti"
+		expanded="{device>/isNoPhone}"
+		class="sapUiResponsiveContentPadding">
+		<items>
+			<IconTabFilter icon="sap-icon://email" key="mail">
+				<Text text="Info content goes here ..." />
+			</IconTabFilter>
+			<IconTabFilter
+				icon="sap-icon://world"
+				key="attachments">
+				<Text text="Attachments go here ..." />
+			</IconTabFilter>
+			<IconTabFilter
+				icon="sap-icon://accept"
+				key="notes">
+				<Text text="Notes go here ..." />
+			</IconTabFilter>
+			<IconTabFilter icon="sap-icon://activity-items" key="people">
+				<Text text="People content goes here ..." />
+			</IconTabFilter>
+		</items>
+	</IconTabBar>
+        </content>
+    </Page>
+</mvc:View>
