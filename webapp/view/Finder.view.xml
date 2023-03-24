@@ -1,0 +1,13 @@
+<mvc:View controllerName="cybersecurity.cybersecurity.controller.Finder" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+    <Label text="First Name" labelFor="inputFirstname"/>
+    <Input id="inputFirstName" class="sapUiSmallMarginBottom" placeholder="Insert First Name"></Input>
+    <Label text="Last Name" labelFor="inputfamilyName"/>
+    <Input id="inputLastName" class="sapUiSmallMarginBottom" placeholder="Insert Last Name"></Input>
+    <Label text="Domain Name" labelFor="inputDomainName"/>
+    <Input id="inputDomainName" class="sapUiSmallMarginBottom" placeholder="Insert Domain Name"></Input>
+    <HBox justifyContent="Center">
+        <Button class="sapUiSmallMarginBottom sapUiTinyMarginTop" id="button" press="onPressButton" text="Find E-Mail"/>
+    </HBox>
+    <MessageStrip id="validityStrip" visible="false" text="" type="None" showIcon="true" class="sapUiMediumMarginBottom"></MessageStrip>
+    <MessageStrip id="counterStrip" visible="false" text="" type="Information" showIcon="true" class="sapUiMediumMarginBottom"></MessageStrip>
+</mvc:View>

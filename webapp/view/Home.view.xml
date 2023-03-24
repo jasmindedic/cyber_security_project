@@ -19,7 +19,7 @@
 			<IconTabFilter
 				icon="sap-icon://accept"
 				key="notes">
-				<Text text="Notes go here ..." />
+				<mvc:XMLView viewName="cybersecurity.cybersecurity.view.Finder"/>
 			</IconTabFilter>
 			<IconTabFilter icon="sap-icon://activity-items" key="people">
 				<Text text="People content goes here ..." />

@@ -16,13 +16,11 @@ sap.ui.define([
                 this.getView().setModel(this.jsonModel);
             },
 
-            sendDomainRequest: function () {
-                let inputDomain = this.getView().byId("domainInput").getValue();
-                console.log(inputDomain);
-                
+            sendDomainRequest: function (input) {
+
                 const apiKey = "45a3296051cc5b5cc710ceba6b076a270c0dc993";
-                
-                let url = "https://cors-anywhere.herokuapp.com/https://api.hunter.io/v2/domain-search?domain=" + inputDomain + "&api_key=" + apiKey;
+
+                let url = "https://cors-anywhere.herokuapp.com/https://api.hunter.io/v2/domain-search?domain=" + input + "&api_key=" + apiKey;
 
                 console.log(url);
 
@@ -42,30 +40,32 @@ sap.ui.define([
                             reject(oError);
                         }
                     });
-                }); 
+                });
             },
 
-            onPressButton: function(){
+            onPressButton: function () {
+                let inputDomain = this.getView().byId("domainInput").getValue();
                 
-                this.sendDomainRequest().then((result) => {
-                    console.log(result.data.emails);
-                    console.log("localdata=" + this.localData);
+                if (!inputDomain) {
+                    MessageToast.show(`You haven't inserted any domain name`);
+                } else {
 
-                    this.localData["emailsFound"] = result.data.emails;
-                    this.jsonModel.setData(this.localData);
+                    this.sendDomainRequest(inputDomain).then((result) => {
+                        console.log(result.data.emails);
+                        console.log("localdata=" + this.localData);
 
-                    console.log(this.localData);
+                        this.localData["emailsFound"] = result.data.emails;
+                        this.jsonModel.setData(this.localData);
 
+                        if (this.localData.emailsFound.length === 0) {
 
-                    MessageToast.show("Hallo", {
-                        duration: 4000,
-                        at: "center center"
-                    });
-                })
-            },
+                            MessageToast.show('Please enter valid domain name!');
+                        }
 
-            showResults: function () {
-                // anzahl
-            },  
+                        console.log(this.localData);
+
+                    })
+                }
+            }
         });
     });
